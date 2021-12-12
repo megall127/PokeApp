@@ -1,0 +1,14 @@
+com/pokeapptype/BuildConfig.java
+ com.pokeapptype.BuildConfig
+com/pokeapptype/ReactNativeFlipper.java
+ com.pokeapptype.ReactNativeFlipper
+ com.pokeapptype.ReactNativeFlipper$1
+ com.pokeapptype.ReactNativeFlipper$2
+ com.pokeapptype.ReactNativeFlipper$2$1
+com/pokeapptype/MainApplication.java
+ com.pokeapptype.MainApplication
+ com.pokeapptype.MainApplication$1
+com/pokeapptype/MainActivity.java
+ com.pokeapptype.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
