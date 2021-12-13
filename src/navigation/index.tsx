@@ -6,25 +6,24 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import PokeHome from '../screens/PokeHome';
 import { routes } from './routes';
 import PokeInfo from '../screens/PokeInfo';
-import { useDispatch } from 'react-redux';
-import { PokeActions } from '../store/ducks/home/actions';
-import getPokemonList from '../store/ducks/home/sagas';
+import FavoritePokemons from '../screens/FavoritePokemons';
+
 
 const Stack = createNativeStackNavigator();
 
 const Routes = () => {
 
-  const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(PokeActions.getPokemonsRequest())
+    
   },[])
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={routes.POKE_HOME}>
+      <Stack.Navigator  initialRouteName={routes.POKE_HOME}>
         <Stack.Screen name={routes.POKE_HOME} component={PokeHome}/>
         <Stack.Screen name={routes.POKE_INFO} component={PokeInfo}/>
+        <Stack.Screen name={routes.FAVORITE_POKEMONS} component={FavoritePokemons}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

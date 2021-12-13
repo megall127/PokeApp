@@ -1,17 +1,20 @@
 /* eslint-disable */
-import { PokeTypes } from './types';
+import { PokeState, PokeTypes } from './types';
 import { action } from 'typesafe-actions';
-import getPokemonList from './sagas';
+  
 
-  const getPokemonsRequest = () => action(PokeTypes.TAKE_POKEMONS_DATA_REQUEST, getPokemonList());
+  const getPokemonsNameRequest = (pokemonName:any) => action(PokeTypes.GET_POKEMONS_NAME_REQUEST, pokemonName);
 
-  const getPokemonsDataSucess = (pokemons: any) =>
-  action(PokeTypes.TAKE_POKEMONS_DATA_SUCESS, { pokemons });
+  const getPokemonsInfo = (PokemonData:any) => action(PokeTypes.GET_POKEMONS_DATA_REQUEST, PokemonData);
 
-  const getPokemonsFail = () => action(PokeTypes.TAKE_POKEMONS_DATA_FAIL);
+  const setPokemonName = (pokeName:string) => action(PokeTypes.SET_POKEMONS_NAME, pokeName)
+
+  const addFavoritePokemons = (favoritePokemons:any) => action(PokeTypes.ADD_FAVORITE_POKEMONS, favoritePokemons)
+
   
   export const PokeActions = {
-    getPokemonsRequest, 
-    getPokemonsDataSucess,
-    getPokemonsFail,
-  };  
+    getPokemonsNameRequest,
+    getPokemonsInfo,
+    setPokemonName,
+    addFavoritePokemons
+  };    

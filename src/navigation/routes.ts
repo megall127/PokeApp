@@ -1,4 +1,6 @@
 export enum routes {
-    POKE_HOME ='POKE_HOME',
+    POKE_HOME  = 'POKE_HOME',
     POKE_INFO = 'POKE_INFO',
+    FAVORITE_POKEMONS = 'FAVORITE_POKEMONS',
+    REQUESTS = 'REQUESTS',
 }

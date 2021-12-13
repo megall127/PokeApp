@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { Provider, useDispatch } from 'react-redux';
 import Routes from './src/navigation';
+import Requests from './src/requests';
 import store from './src/store';
 
 
@@ -24,6 +25,7 @@ const App: React.FC = () => {
 
   return (
       <Provider store={store}>
+        <Requests />
       <Routes />
       </Provider>
 
